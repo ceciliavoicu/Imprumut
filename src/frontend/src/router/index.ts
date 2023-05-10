@@ -17,6 +17,12 @@ const routes = [
          name: 'Imprumut',
           component: () => import('@/views/Imprumut.vue'),
        },
+       {
+       path: '/student',
+                name: 'Student',
+                 component: () => import('@/views/Student.vue'),
+
+       }
 ]
 
 const router = createRouter({

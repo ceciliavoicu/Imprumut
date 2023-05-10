@@ -11,7 +11,7 @@ import ro.proiect.Imprumut.service.CarteService;
 import java.util.List;
 
 @RestController
-@RequestMapping("carte/imp")
+@RequestMapping("api/carte/imp")
 @RequiredArgsConstructor
 
 public class CarteController {

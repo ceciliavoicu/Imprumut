@@ -8,7 +8,7 @@ import ro.proiect.Imprumut.model.Cititor;
 import ro.proiect.Imprumut.service.CititorService;
 
 @RestController
-@RequestMapping("cititor/imp")
+@RequestMapping("api/cititor/imp")
 @RequiredArgsConstructor
 public class CititorController {
     private  final CititorService cititorService;

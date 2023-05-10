@@ -11,7 +11,7 @@ import ro.proiect.Imprumut.repository.ImprumutRepository;
 import ro.proiect.Imprumut.service.ImprumutService;
 
 @RestController
-@RequestMapping("imprumut/imp")
+@RequestMapping("api/imprumut/imp")
 @RequiredArgsConstructor
 
 public class ImprumutController
