@@ -10,6 +10,24 @@ class StudentService {
       .catch(() => {})
   }
 
+  deleteStudent(id){
+   AXIOS
+     .delete('student/imp' , {
+     params:{
+     id: Number(id)
+     }
+     })
+     .then(() => {
+       alert("Studentul a fost sters!")
+     })
+     .catch(() => {})
+  }
+
+  getAllStudenti(){
+  return
+  AXIOS
+  .get('student/imp')
+  }
 }
 
 
