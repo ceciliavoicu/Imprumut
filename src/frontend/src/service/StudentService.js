@@ -6,6 +6,7 @@ class StudentService {
       .post('student/imp' , form)
       .then(() => {
         alert("Studentul a fost inregistrat")
+        window.location.reload()
       })
       .catch(() => {})
   }
@@ -19,13 +20,13 @@ class StudentService {
      })
      .then(() => {
        alert("Studentul a fost sters!")
+       window.location.reload()
      })
      .catch(() => {})
   }
 
   getAllStudenti(){
-  return
-  AXIOS
+  return AXIOS
   .get('student/imp')
   }
 }
