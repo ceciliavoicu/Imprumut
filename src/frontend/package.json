@@ -7,6 +7,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vuepic/vue-datepicker": "^4.2.0",
     "@mdi/font": "7.0.96",
     "axios": "^1.3.5",
     "roboto-fontface": "*",

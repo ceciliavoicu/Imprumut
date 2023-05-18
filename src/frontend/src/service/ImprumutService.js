@@ -5,10 +5,29 @@ class ImprumutService {
     AXIOS
       .post('imprumut/imp' , form)
       .then(() => {
-        alert("Cartea a fost imprumutata")
+        alert("Cartea a fost imprumutata!")
       })
       .catch(() => {})
   }
+
+  deleteImprumut(id){
+     AXIOS
+       .delete('imprumut/imp' , {
+       params:{
+       id: Number(id)
+       }
+       })
+       .then(() => {
+         alert("Imprumutul a fost sters!")
+         window.location.reload()
+       })
+       .catch(() => {})
+    }
+
+    getAllImprumut(){
+    return AXIOS
+    .get('imprumut/imp')
+    }
 
 }
 

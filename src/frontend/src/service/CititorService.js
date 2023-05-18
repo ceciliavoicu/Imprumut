@@ -10,6 +10,24 @@ class CititorService {
       .catch(() => {})
   }
 
+deleteStudent(id){
+   AXIOS
+     .delete('cititor/imp' , {
+     params:{
+     id: Number(id)
+     }
+     })
+     .then(() => {
+       alert("Cititorul a fost sters!")
+       window.location.reload()
+     })
+     .catch(() => {})
+  }
+
+  getAllCititori(){
+  return AXIOS
+  .get('cititor/imp')
+  }
 }
 
 

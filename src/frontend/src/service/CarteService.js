@@ -10,6 +10,24 @@ class CarteService {
       .catch(() => {})
   }
 
+  deleteCarte(id){
+   AXIOS
+     .delete('carte/imp' , {
+     params:{
+     id: Number(id)
+     }
+     })
+     .then(() => {
+       alert("Cartea a fost stearsa!")
+       window.location.reload()
+     })
+     .catch(() => {})
+  }
+
+  getAllCarti(){
+  return AXIOS
+  .get('carte/imp')
+  }
 }
 
 

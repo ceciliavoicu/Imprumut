@@ -12,6 +12,15 @@
         </v-card>
         <v-btn @click="salveazaCititor" color="green">Submit</v-btn>
       </v-form>
+      <br>
+      <br>
+      <br>
+      <v-data-table :headers="headers" :items="tabel">
+      <template v-slot:item.actions="{item}">
+      <v-icon @click="stergeCititor(item.raw.id)">mdi-delete
+      </v-icon>
+      </template>
+      </v-data-table>
     </v-responsive>
   </v-container>
 </template>
@@ -19,10 +28,10 @@
 <script>
 import CititorService from "@/service/CititorService";
 
-export default{
-  name:"Cititor",
+export default {
+  name: "Cititor",
   data(){
-  return{
+   return {
     cititor: {
       nume: null,
       prenume: null,
@@ -30,16 +39,46 @@ export default{
       nrTelefon: null,
       email: null
       },
+    tabel: [{
+      id:[],
+      nume: [],
+      prenume: [],
+      adresa: [],
+      nrTelefon: [],
+      email: []
+      }],
+    headers: [
+      {title: 'Id', key: 'id'},
+      {title: 'Nume', key: 'nume'},
+      {title: 'Prenume', key: 'prenume'},
+      {title: 'Adresa', key: 'adresa'},
+      {title: 'Numar Telefon', key: 'nrTelefon'},
+      {title: 'Email', key: 'email'},
+      {title: 'Actions', key: 'actions'}
+      ],
 
      }
+  },
+  created(){
+  this.getAllCititori();
   },
 
   methods: {
      salveazaCititor(){
         CititorService.postCititor(this.cititor)
-     }
+     },
+     stergeCititor(id){
+        console.log("Hello")
+        CititorService.deleteCititor(id)
+     },
+     getAllCititori(){
+        CititorService.getAllCititori().then((response) => {
+        this.tabel=response.data;
+        })
+     },
   },
 }
+
 
 </script>
 
