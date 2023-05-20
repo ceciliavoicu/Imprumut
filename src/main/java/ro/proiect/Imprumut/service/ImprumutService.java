@@ -2,9 +2,7 @@ package ro.proiect.Imprumut.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ro.proiect.Imprumut.model.Cititor;
 import ro.proiect.Imprumut.model.Imprumut;
-import ro.proiect.Imprumut.repository.CititorRepository;
 import ro.proiect.Imprumut.repository.ImprumutRepository;
 
 import java.util.List;

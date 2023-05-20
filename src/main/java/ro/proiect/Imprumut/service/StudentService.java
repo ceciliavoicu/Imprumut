@@ -2,7 +2,6 @@ package ro.proiect.Imprumut.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ro.proiect.Imprumut.model.Carte;
 import ro.proiect.Imprumut.model.Student;
 import ro.proiect.Imprumut.repository.StudentRepository;
 

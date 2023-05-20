@@ -3,11 +3,8 @@ package ro.proiect.Imprumut.controllers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
-import ro.proiect.Imprumut.model.Cititor;
 import ro.proiect.Imprumut.model.Imprumut;
-import ro.proiect.Imprumut.repository.ImprumutRepository;
 import ro.proiect.Imprumut.service.ImprumutService;
 
 @RestController
