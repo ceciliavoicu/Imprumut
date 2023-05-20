@@ -14,27 +14,26 @@ import ro.proiect.Imprumut.service.ImprumutService;
 @RequestMapping("api/imprumut/imp")
 @RequiredArgsConstructor
 
-public class ImprumutController
-{
+public class ImprumutController {
     private final ImprumutService imprumutService;
+
     @GetMapping
-    public ResponseEntity<Object> getAllImprumut()
-    {
+    public ResponseEntity<Object> getAllImprumut() {
         return new ResponseEntity<>(imprumutService.getAllImprumut(), HttpStatus.OK);
         //returneaza o lista cu imprumuturi si are un cod ok(200)
     }
+
     @PostMapping
-    public ResponseEntity<Void> saveImprumut(@RequestBody Imprumut imprumut)
-    {
+    public ResponseEntity<Void> saveImprumut(@RequestBody Imprumut imprumut) {
         imprumutService.saveImprumut(imprumut);
         //intercepteaza un body pe care il trimite in browser,si apeleaza metoda care face salvare
-        return  new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
         //returneaza un sttaus, dar nu face nimic
 
     }
+
     @DeleteMapping
-    public ResponseEntity<Void> deleteImprumut(@RequestParam Long id)
-    {
+    public ResponseEntity<Void> deleteImprumut(@RequestParam Long id) {
         imprumutService.deleteImprumut(id);
         //intercepteaza un parametru pe care il trimite in browser,si apeleaza metoda care face salvare
         return new ResponseEntity<>(HttpStatus.OK);

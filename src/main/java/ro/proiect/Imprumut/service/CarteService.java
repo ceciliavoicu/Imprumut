@@ -12,21 +12,20 @@ import java.util.List;
 public class CarteService {
     private final CarteRepository carteRepository;
 
-    public List<Carte> getAllCarti()
-    {
+    public List<Carte> getAllCarti() {
         return carteRepository.findAll();
     }
+
     //returneaza o lista de obiecte de tip carte
-    public void saveCarte(Carte carte){
+    public void saveCarte(Carte carte) {
         carteRepository.saveAndFlush(carte);
     }
+
     //salveaza o singura carte
-    public void deleteCarte(Long id)
-    {
+    public void deleteCarte(Long id) {
         carteRepository.deleteById(id);
     }
     //sterge un obiect de tip carte in functie de id-ul dat
-
 
 
 }

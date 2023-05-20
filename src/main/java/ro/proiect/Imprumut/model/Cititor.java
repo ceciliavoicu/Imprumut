@@ -18,6 +18,4 @@ public class Cititor {
     private String nrTelefon;
     private String email;
 
-
-
 }

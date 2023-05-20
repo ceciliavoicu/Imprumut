@@ -11,26 +11,25 @@ import ro.proiect.Imprumut.service.CititorService;
 @RequestMapping("api/cititor/imp")
 @RequiredArgsConstructor
 public class CititorController {
-    private  final CititorService cititorService;
+    private final CititorService cititorService;
 
     @GetMapping
-    public ResponseEntity<Object> getAllCititori()
-    {
+    public ResponseEntity<Object> getAllCititori() {
         return new ResponseEntity<>(cititorService.getAllCititori(), HttpStatus.OK);
         //returneaza o lista cu cititori si are un cod ok(200)
     }
+
     @PostMapping
-    public ResponseEntity<Void> saveCititor(@RequestBody Cititor cititor)
-    {
+    public ResponseEntity<Void> saveCititor(@RequestBody Cititor cititor) {
         cititorService.saveCititor(cititor);
         //intercepteaza un body pe care il trimite in browser,si apeleaza metoda care face salvare
-        return  new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
         //returneaza un sttaus, dar nu face nimic
 
     }
+
     @DeleteMapping
-    public ResponseEntity<Void> deleteCititor(@RequestParam Long id)
-    {
+    public ResponseEntity<Void> deleteCititor(@RequestParam Long id) {
         cititorService.deleteCititor(id);
         //intercepteaza un parametru pe care il trimite in browser,si apeleaza metoda care face salvare
         return new ResponseEntity<>(HttpStatus.OK);

@@ -11,15 +11,19 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class StudentService {
-    private  final StudentRepository studentRepository;
-    public List<Student> getAllStudent(){return studentRepository.findAll();}
+    private final StudentRepository studentRepository;
+
+    public List<Student> getAllStudent() {
+        return studentRepository.findAll();
+    }
+
     //returneaza o lista de obiecte de tip student
-    public void saveStudent(Student student){
+    public void saveStudent(Student student) {
         studentRepository.saveAndFlush(student);
     }
+
     //salveaza un singur student
-    public void deleteStudent(Long id)
-    {
+    public void deleteStudent(Long id) {
         studentRepository.deleteById(id);
     }
     //sterge un obiect de tip student in functie de id-ul dat

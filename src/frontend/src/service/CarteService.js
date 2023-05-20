@@ -1,32 +1,39 @@
 import {AXIOS} from "@/Config/AxiosConfig";
 
 class CarteService {
-  postCarte(form){
+  postCarte(form) {
     AXIOS
-      .post('carte/imp' , form)
+      .post('carte/imp', form)
       .then(() => {
         alert("Cartea a fost publicata")
       })
-      .catch(() => {})
+      .catch(() => {
+      })
   }
 
-  deleteCarte(id){
-   AXIOS
-     .delete('carte/imp' , {
-     params:{
-     id: Number(id)
-     }
-     })
-     .then(() => {
-       alert("Cartea a fost stearsa!")
-       window.location.reload()
-     })
-     .catch(() => {})
+  getCarti() {
+    return AXIOS
+      .get('carte/imp')
   }
 
-  getAllCarti(){
-  return AXIOS
-  .get('carte/imp')
+  deleteCarte(id) {
+    AXIOS
+      .delete('carte/imp', {
+        params: {
+          id: Number(id)
+        }
+      })
+      .then(() => {
+        alert("Cartea a fost stearsa!")
+        window.location.reload()
+      })
+      .catch(() => {
+      })
+  }
+
+  getAllCarti() {
+    return AXIOS
+      .get('carte/imp')
   }
 }
 

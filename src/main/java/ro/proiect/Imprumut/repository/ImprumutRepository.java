@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import ro.proiect.Imprumut.model.Imprumut;
 
 @Repository
-public interface ImprumutRepository extends JpaRepository<Imprumut,Long> {
+public interface ImprumutRepository extends JpaRepository<Imprumut, Long> {
 }

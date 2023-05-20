@@ -12,23 +12,22 @@ import ro.proiect.Imprumut.service.StudentService;
 @RequiredArgsConstructor
 public class StudentController {
     private final StudentService studentService;
+
     @GetMapping
-    public ResponseEntity<Object> getAllStudent()
-    {
-        return  new ResponseEntity<>(studentService.getAllStudent(), HttpStatus.OK);
+    public ResponseEntity<Object> getAllStudent() {
+        return new ResponseEntity<>(studentService.getAllStudent(), HttpStatus.OK);
         //returneaza o lista cu studenti si are un cod ok(200)
     }
 
     @PostMapping
-    public ResponseEntity<Void> salvareStudent(@RequestBody Student student)
-    {
+    public ResponseEntity<Void> salvareStudent(@RequestBody Student student) {
         studentService.saveStudent(student);
-        return  new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
+
     @DeleteMapping
-    public  ResponseEntity<Void> stergeStudent(@RequestParam Long id)
-    {
+    public ResponseEntity<Void> stergeStudent(@RequestParam Long id) {
         studentService.deleteStudent(id);
-        return  new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

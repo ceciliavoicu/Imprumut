@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import ro.proiect.Imprumut.model.Cititor;
 
 @Repository
-public interface CititorRepository extends JpaRepository<Cititor,Long> {
+public interface CititorRepository extends JpaRepository<Cititor, Long> {
 }

@@ -17,8 +17,4 @@ public class Carte {
     private String editura;
     private Integer nrPagini;
     private Integer anulPublicarii;
-
-
-
-
 }

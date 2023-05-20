@@ -1,33 +1,35 @@
 import {AXIOS} from "@/Config/AxiosConfig";
 
 class ImprumutService {
-  postImprumut(form){
+  postImprumut(form) {
     AXIOS
-      .post('imprumut/imp' , form)
+      .post('imprumut/imp', form)
       .then(() => {
         alert("Cartea a fost imprumutata!")
       })
-      .catch(() => {})
+      .catch(() => {
+      })
   }
 
-  deleteImprumut(id){
-     AXIOS
-       .delete('imprumut/imp' , {
-       params:{
-       id: Number(id)
-       }
-       })
-       .then(() => {
-         alert("Imprumutul a fost sters!")
-         window.location.reload()
-       })
-       .catch(() => {})
-    }
+  deleteImprumut(id) {
+    AXIOS
+      .delete('imprumut/imp', {
+        params: {
+          id: Number(id)
+        }
+      })
+      .then(() => {
+        alert("Imprumutul a fost sters!")
+        window.location.reload()
+      })
+      .catch(() => {
+      })
+  }
 
-    getAllImprumut(){
+  getAllImprumut() {
     return AXIOS
-    .get('imprumut/imp')
-    }
+      .get('imprumut/imp')
+  }
 
 }
 

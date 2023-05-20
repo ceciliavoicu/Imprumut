@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import ro.proiect.Imprumut.model.Carte;
 
 @Repository
-public interface CarteRepository extends JpaRepository<Carte,Long> {
+public interface CarteRepository extends JpaRepository<Carte, Long> {
 }
