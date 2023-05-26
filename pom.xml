@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>ro.proiect</groupId>
 	<artifactId>Imprumut</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>Spring</version>
 	<name>Imprumut</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
